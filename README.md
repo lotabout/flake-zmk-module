@@ -2,4 +2,10 @@
 
 > **Important**: If you have a board version prior to 1.0, you should use the config from Flake_v0.1/v0.2 [branch](https://github.com/anywhy-io/flake-zmk-module/tree/Flake_v0.1/v0.2) and [actions](https://github.com/anywhy-io/flake-zmk-module/actions?query=branch%3AFlake_v0.1%2Fv0.2).
 
+## Keymap Editor
+
+Use `config/anywhy_flake.keymap` with [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/). The matching layout metadata is in `config/anywhy_flake.json`.
+
+The shield default keymap remains at `boards/shields/anywhy_flake/anywhy_flake.keymap` for ZMK module compatibility. For personal firmware edits, update the keymap under `config/`.
+
 <img alt="keymap" width="100%" src="./keymap.svg">
