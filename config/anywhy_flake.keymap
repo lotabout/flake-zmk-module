@@ -45,14 +45,6 @@
     combos {
         compatible = "zmk,combos";
 
-        cmd-tab-quick-trigger {
-            bindings = <&swap>;
-            key-positions = <54 12>;
-            layers = <0>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <0>;
-        };
-
         hmr_lgui {
             bindings = <&kp LGUI>;
             key-positions = <28 27>;
@@ -143,13 +135,13 @@
             >;
         };
 
-        numpad {
+        media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &kp PLUS       &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &kp MINUS      &kp ENTER
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &trans         &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0     &kp DOT
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_VOL_DN          &kp C_VOLUME_UP       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans  &trans
             >;
         };
 
