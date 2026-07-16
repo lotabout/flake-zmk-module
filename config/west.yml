@@ -7,10 +7,11 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # Last ZMK main commit verified by this repository's successful Actions run.
+      revision: 484a0547078228f6957ed164523823e39fbedec4
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
-      revision: main
+      revision: ebbc1f0ccdb51669650bb0ac3e34920d09e62400
   self:
     path: config
