@@ -2,16 +2,52 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: lotabout
+      url-base: https://github.com/lotabout
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
   projects:
+    # Zephyr override: lotabout/zephyr hpdv2-v4.1.0-pipeline-backport, which is
+    # ZMK's v4.1.0+zmk-fixes plus the upstream BLE controller prepare-pipeline
+    # fixes that stop the central from asserting in lll.c and freezing until a
+    # manual reset. Must stay ahead of the zephyr revision imported by zmk's
+    # app/west.yml.
+    - name: zephyr
+      remote: lotabout
+      revision: e46c6fcb759735442c1dc719ecc8c8630cca4a39
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
+    # ZMK: lotabout/zmk hpdv2-hog-fixes, which is upstream f84ef436 plus a fix
+    # replacing unbounded recursion in zmk_hog_send_* on a full message queue
+    # with a bounded retry loop (stack overflow under BLE congestion).
     - name: zmk
-      remote: zmkfirmware
-      # Last ZMK main commit verified by this repository's successful Actions run.
-      revision: 484a0547078228f6957ed164523823e39fbedec4
+      remote: lotabout
+      revision: b2b025a73a0f5ece3c1ec2591921cbb0876fbdc7
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: ebbc1f0ccdb51669650bb0ac3e34920d09e62400
+  # zmk's app/west.yml relies on this to pull optional Zephyr modules such as
+  # nanopb (needed by ZMK Studio). Overriding the zephyr project at this level
+  # drops the imported filter, so restate it here.
+  group-filter: [+optional]
   self:
     path: config
