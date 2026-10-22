@@ -118,21 +118,21 @@
 
         right_thumb_press {
             bindings = <
-&kp F12    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5          &kp F6  &kp F7  &kp F8        &kp F9  &kp F10  &kp F11
-&kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5    &trans  &trans  &trans        &trans  &trans   &trans
-&trans     &trans        &trans        &trans        &trans         &trans          &trans  &trans  &trans        &trans  &trans   &trans
-&trans     &trans        &trans        &trans        &trans         &trans          &trans  &trans  &trans        &trans  &trans   &trans
-           &trans        &trans        &trans        &kp LA(SPACE)  &kp LG(BSPC)    &trans  &trans  &kp RG(RALT)  &trans  &trans
+&kp F12    &kp F1        &kp F2        &kp F3        &kp F4         &kp F5          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &kp F11
+&kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp MINUS
+&trans     &trans        &trans        &trans        &trans         &trans          &trans        &trans        &trans        &trans        &trans        &trans
+&trans     &trans        &trans        &trans        &trans         &trans          &trans        &trans        &trans        &trans        &trans        &trans
+           &trans        &trans        &trans        &kp LA(SPACE)  &kp LG(BSPC)    &trans        &trans        &kp RG(RALT)  &trans        &trans
             >;
         };
 
         left_thumb_press {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3            &kp F4  &kp F5    &kp F6        &kp F7         &kp F8             &kp F9           &kp F10       &kp F11
-&trans   &trans  &trans  &trans            &trans  &trans    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8       &kp NUMBER_9     &kp NUMBER_0  &kp MINUS
-&trans   &trans  &trans  &kp LG(D)         &trans  &trans    &kp LEFT      &kp DOWN       &kp UP             &kp RIGHT        &trans        &trans
-&trans   &trans  &trans  &trans            &trans  &trans    &trans        &trans         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans        &trans
-         &trans  &trans  &kp LG(LEFT_ALT)  &trans  &trans    &trans        &kp LG(SPACE)  &trans             &kp C_BRI_DEC    &kp C_BRI_UP
+&kp F12    &kp F1        &kp F2        &kp F3            &kp F4        &kp F5          &kp F6        &kp F7         &kp F8             &kp F9           &kp F10       &kp F11
+&kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8       &kp NUMBER_9     &kp NUMBER_0  &kp MINUS
+&trans     &trans        &trans        &kp LG(D)         &trans        &trans          &kp LEFT      &kp DOWN       &kp UP             &kp RIGHT        &trans        &trans
+&trans     &trans        &trans        &trans            &trans        &trans          &trans        &trans         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans        &trans
+           &trans        &trans        &kp LG(LEFT_ALT)  &trans        &trans          &trans        &kp LG(SPACE)  &trans             &kp C_BRI_DEC    &kp C_BRI_UP
             >;
         };
 
